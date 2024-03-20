@@ -46,7 +46,7 @@ Teachers should be able to manage courses, score students, and access valuable i
 - **Take Courses**: Teachers can explore and enroll in courses they wish to teach, displayed on their dashboard.
 - **Score Students**: Teachers can evaluate students by navigating to the scoring section on their dashboard, selecting the appropriate course, and entering scores for each student.
 - **View Courses List**: Access a comprehensive list of courses they teach for an overview of current teaching assignments.
-- **View Course's List of Students**: Check the list of students enrolled in specific courses to monitor their progress.
+- **View course's List of Students**: Check the list of students enrolled in specific courses to monitor their progress.
 - **Show Teacher’s Score on the Menu**: Conveniently monitor their teaching performance by checking their score displayed on the menu.
 
 ### Assistant class:
@@ -63,7 +63,7 @@ The assistant serves as an administrative tool, allowing administrators to creat
   3. Confirm the action to remove the selected user.
 - **View Courses and Their List of Students**: Explore the list of courses available on the platform and view enrolled students for each course.
 - **Check Student/Teacher Profile**: Access detailed profiles for both students and teachers for administrative purposes.
-- **Create a Course**: Follow steps to create a new course on the platform:
+- **Create a course**: Follow steps to create a new course on the platform:
   1. Navigate to the course creation section in the dashboard.
   2. Provide necessary details for the new course.
   3. Confirm and save the course.
@@ -90,11 +90,11 @@ Serving as a central management system for Hogwarts School of Witchcraft and Wiz
 - Rating teachers and leaving comments for them as a student.
 - Retrieving course information via UUID.
 
-### Course class:
+### course class:
 
-Representing specific courses offered at Hogwarts School of Witchcraft and Wizardry, the Course class is capable of setting course information.
+Representing specific courses offered at Hogwarts School of Witchcraft and Wizardry, the course class is capable of setting course information.
 
-- **Setting Course Information**:
+- **Setting course Information**:
   - Store the title of the course.
   - Assign a unique identifier to each course (courseID), represented by a UUID.
   - Maintain a list of students enrolled in the course (students).
@@ -116,7 +116,7 @@ Your submission will be evaluated based on the following criteria:
 
 As an additional challenge, consider implementing the following bonus objectives:
 
-- **Sort Course's List of Students**: Allow sorting of the list of students within a course based on specific criteria.
+- **Sort course's List of Students**: Allow sorting of the list of students within a course based on specific criteria.
 - **View Weekly Schedule**: Implement functionality for students to view their weekly schedule (optional).
 - **Utilize Abstract Classes and Interfaces**: Explore the usage of abstract classes and interfaces in your Java implementation to achieve better code structure and design.
 - Enhance your classes by incorporating additional attributes and methods to enrich their functionality and expand their capabilities.
