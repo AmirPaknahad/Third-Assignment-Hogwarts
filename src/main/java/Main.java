@@ -5,7 +5,7 @@ import java.util.UUID;
 
 public class Main {
     public static void main(String[] args) {
-        Assistant assistant = new Assistant("ErmiaHost", "ermia1384");
+        Assistant assistant = new Assistant("admin", "admin1234");
         Hogwarts.addAssistant(assistant);
         runMenu();
     }
@@ -14,11 +14,11 @@ public class Main {
         System.out.print("\n\n");
         Scanner in = new Scanner(System.in);
         while (true) {
-            System.out.println("choose one: (logOut, TeacherRequest, RemoveUser, CreateCourse, CheckProfile, ViewCourseDetail, Setting, newAssistant)");
+            System.out.println("choose one (logOut, TeacherRequest, RemoveUser, CreateCourse, CheckProfile, ViewCourseDetail, Setting, newAssistant)");
             String input = in.next();
             while (!input.equals("logOut") && !input.equals("RemoveUser") && !input.equals("CreateCourse") && !input.equals("TeacherRequest")
                     && !input.equals("CheckProfile") && !input.equals("ViewCourseDetail") && !input.equals("Setting") && !input.equals("newAssistant")) {
-                System.out.print("enter correct input: ");
+                System.out.print("please enter correctly: ");
                 input = in.next();
             }
             if (input.equals("logOut")) {
@@ -48,7 +48,7 @@ public class Main {
                 System.out.print("teacher ot student? ");
                 input = in.next();
                 while (!input.equals("teacher") && !input.equals("student")) {
-                    System.out.print("enter correct input: ");
+                    System.out.print("please enter correctly: ");
                     input = in.next();
                 }
                 if (input.equals("teacher")) {
@@ -66,7 +66,7 @@ public class Main {
                         if (find)
                             break;
                         else {
-                            System.out.println("enter correct input");
+                            System.out.println("please enter correctly:");
                         }
                     }
                     if (find) {
@@ -112,7 +112,7 @@ public class Main {
                         if (find)
                             break;
                         else {
-                            System.out.println("enter correct input");
+                            System.out.println("please enter correctly:");
                         }
                     }
                     if (find) {
@@ -144,7 +144,7 @@ public class Main {
             else if (input.equals("CreateCourse")) {
                 System.out.print("enter name for course: ");
                 input = in.next();
-                System.out.print("enter course details: ");
+                System.out.print("enter course details: (if you finished, type \"FINISH\" at the end)");
                 String det = "";
                 while (in.hasNext()) {
                     String input2 = in.next();
@@ -207,10 +207,10 @@ public class Main {
                 }
             }
             else {
-                System.out.print("choos one : (changePass, changeUserName :");
+                System.out.print("choose one(changePass, changeUserName) :");
                 input = in.next();
                 while (!input.equals("changePass") && !input.equals("changeUserName")) {
-                    System.out.print("enter correct input: ");
+                    System.out.print("please enter correctly: ");
                     input = in.next();
                 }
                 if (input.equals("changePass")) {
@@ -239,7 +239,7 @@ public class Main {
         System.out.print("\n\n");
         Scanner in = new Scanner(System.in);
         while (true) {
-            System.out.println("choose one: (logOut, CourseRequest, MyCourses, Scoring, MyScore, Setting)");
+            System.out.println("choose one(logOut, CourseRequest, MyCourses, Scoring, MyScore, Setting): ");
             String input = in.next();
             while (!input.equals("logOut") && !input.equals("CourseRequest") && !input.equals("MyCourses")
                     && !input.equals("Scoring") && !input.equals("MyScore") && !input.equals("Setting") ) {
@@ -262,10 +262,10 @@ public class Main {
                 Hogwarts.Scoring(teacher);
             }
             else {
-                System.out.print("choos one : (changePass, changeUserName :");
+                System.out.print("choose one(changePass, changeUserName): ");
                 input = in.next();
                 while (!input.equals("changePass") && !input.equals("changeUserName")) {
-                    System.out.print("enter correct input: ");
+                    System.out.print("please enter correctly: ");
                     input = in.next();
                 }
                 if (input.equals("changePass")) {
@@ -323,11 +323,11 @@ public class Main {
         System.out.print("\n\n");
         Scanner in = new Scanner(System.in);
         while (true) {
-            System.out.println("choose one: (logOut, TakeCourse, MyCourses, MyTeachers, ScoreTeachers, Setting)");
+            System.out.println("choose one(logOut, TakeCourse, MyCourses, MyTeachers, ScoreTeachers, Setting)");
             String input = in.next();
             while (!input.equals("logOut") && !input.equals("TakeCourse") && !input.equals("MyCourses")
                     && !input.equals("MyTeachers") && !input.equals("ScoreTeachers") && !input.equals("Setting") ) {
-                System.out.print("enter correct input: ");
+                System.out.print("please enter correctly: ");
                 input = in.next();
             }
             if (input.equals("logOut")) {
@@ -395,10 +395,10 @@ public class Main {
                 }
             }
             else {
-                System.out.print("choos one : (changePass, changeUserName :");
+                System.out.print("choose one(changePass, changeUserName): ");
                 input = in.next();
                 while (!input.equals("changePass") && !input.equals("changeUserName")) {
-                    System.out.print("enter correct input: ");
+                    System.out.print("please enter correctly: ");
                     input = in.next();
                 }
                 if (input.equals("changePass")) {
@@ -437,11 +437,11 @@ public class Main {
     public static void runMenu() {
         Scanner in = new Scanner(System.in);
         while (true) {
-            System.out.println("enter back-to-menu for going yo menu");
-            System.out.println("select your profile: (student, teacher, assistant)");
+            System.out.println("enter back-to-menu for going to menu");
+            System.out.println("select your profile(student, teacher, assistant): ");
             String input = in.next();
             while (!input.equals("student") && !input.equals("teacher") && !input.equals("assistant")) {
-                System.out.print("enter correct input : ");
+                System.out.print("please enter correctly: ");
                 input = in.next();
             }
             //Student
@@ -530,7 +530,7 @@ public class Main {
                         else {
                             System.out.print("enter passWord: ");
                             String pass = in.next();
-                            Teacher newTeacher = new Teacher(input, "kalampoloshirzi+salad+khoonezahraina");
+                            Teacher newTeacher = new Teacher(input, "");
                             newTeacher.setPass(pass);
                             Hogwarts.teachers.add(newTeacher);
                             Assistant.teachersInQueue.add(newTeacher);
